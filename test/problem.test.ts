@@ -21,7 +21,7 @@ describe("TypeScript Advanced Features", () => {
     it("エラーメッセージを正しくフォーマットできる", () => {
       const notification: Notification = {
         type: "error",
-        message: "エラーが発生しました",
+        errMessage: "エラーが発生しました",
       };
       expect(formatNotification(notification)).toBe("❌ エラーが発生しました");
     });
@@ -29,7 +29,7 @@ describe("TypeScript Advanced Features", () => {
     it("警告メッセージを正しくフォーマットできる", () => {
       const notification: Notification = {
         type: "warning",
-        message: "注意してください",
+        warnMessage: "注意してください",
       };
       expect(formatNotification(notification)).toBe("⚠️ 注意してください");
     });
