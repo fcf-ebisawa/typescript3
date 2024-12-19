@@ -3,13 +3,13 @@
  *
  * 以下のNotificationユニオン型を使って、通知メッセージを生成する関数を実装してください。
  * - type: "success" → "✅ {message}"
- * - type: "error" → "❌ {message}"
- * - type: "warning" → "⚠️ {message}"
+ * - type: "error" → "❌ {errMessage}"
+ * - type: "warning" → "⚠️ {warnMessage}"
  */
 export type Notification =
   | { type: "success"; message: string }
-  | { type: "error"; message: string }
-  | { type: "warning"; message: string };
+  | { type: "error"; errMessage: string }
+  | { type: "warning"; warnMessage: string };
 
 export function formatNotification(notification: Notification): string {
   // TODO: 通知の種類に応じて適切なメッセージを生成してください

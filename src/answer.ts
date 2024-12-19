@@ -3,17 +3,17 @@
  */
 export type Notification =
   | { type: "success"; message: string }
-  | { type: "error"; message: string }
-  | { type: "warning"; message: string };
+  | { type: "error"; errMessage: string }
+  | { type: "warning"; warnMessage: string };
 
 export function formatNotification(notification: Notification): string {
   switch (notification.type) {
     case "success":
       return `✅ ${notification.message}`;
     case "error":
-      return `❌ ${notification.message}`;
+      return `❌ ${notification.errMessage}`;
     case "warning":
-      return `⚠️ ${notification.message}`;
+      return `⚠️ ${notification.warnMessage}`;
   }
 }
 
